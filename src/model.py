@@ -3,7 +3,7 @@ import pickle
 import numpy as np
 from typing import List
 
-MODEL_FILE = r"models/hw1 (1).pkl"
+MODEL_FILE = r"../models/hw1 (1).pkl"
 model = pickle.load(open(MODEL_FILE, "rb"))
 
 
