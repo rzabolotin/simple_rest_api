@@ -1,0 +1,4 @@
+flask==1
+numpy
+sklearn
+requests
