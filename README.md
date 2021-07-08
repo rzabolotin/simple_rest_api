@@ -1,2 +1,6 @@
 # simple_rest_api
-Several example of simple rest api for ML
+In this repo i create a several API using:
+- Flask
+- FastAPI
+- Falcon
+- Django Rest Framework
