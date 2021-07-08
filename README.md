@@ -1,6 +1,5 @@
 # simple_rest_api
-In this repo i create a several API using:
+In this repo I create a several APIs using:
 - Flask
 - FastAPI
 - Falcon
-- Django Rest Framework
