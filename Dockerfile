@@ -1,5 +1,6 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.8
 
+ENV LISTEN_PORT 5000
 RUN pip install uwsgi flask sklearn numpy
 
 WORKDIR /app
