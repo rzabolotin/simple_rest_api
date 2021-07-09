@@ -8,7 +8,7 @@ And also I created two Dockerfiles to deploy flask service
 - with uwsgi
 - with nginx+uwsgi
 
-# how to run
+# How to run
 
 ## flask
 ```shell
@@ -17,7 +17,7 @@ python src\flask_app.py
 
 ## falcon
 ```shell
-python src\falllcon_app.py
+python src\falcon_app.py
 ```
 
 ## fast_api
