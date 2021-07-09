@@ -5,7 +5,7 @@ RUN pip install --upgrade pip
 RUN pip install uwsgi flask sklearn numpy
 
 WORKDIR /app
-COPY ../src /app
-COPY ../models /app/models
+COPY .src /app
+COPY .models /app/models
 
 CMD ["uwsgi", "--http", ":5000", "--module", "flask_app:app", "--processes", "4", "--master"]
