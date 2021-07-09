@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  checker:
+    build: checker
+    image: mike0sv/sf_docker_check
+    container_name: checker
+  solution:
+    build: docker/Dockerfile
+    ports:
+      - 80:80
