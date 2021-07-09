@@ -5,7 +5,7 @@ services:
     image: mike0sv/sf_docker_check
     container_name: checker
   solution:
-    build: docker/Dockerfile
+    build: docker
     container_name: solution
     ports:
       - 80:80
