@@ -6,3 +6,4 @@ falcon
 waitress
 fastapi
 uvicorn
+loguru

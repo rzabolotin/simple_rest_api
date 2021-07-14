@@ -1,4 +1,5 @@
 from flask import Flask, request, jsonify
+from loguru import logger
 
 from model import predict as model_predict
 
@@ -12,9 +13,10 @@ def hello_world():
 @app.route('/predict', methods=['POST'])
 def predict():
     numbers = request.json
-    message = {"prediction": model_predict(numbers)}
-    print(message)
-    return jsonify(message)
+    logger.info(f"Got request for prediction {numbers}")
+    prediction = model_predict(numbers)
+    logger.success(f"Calculated the prediction = {prediction}")
+    return jsonify({"prediction": prediction})
 
 
 if __name__ == '__main__':

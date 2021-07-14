@@ -1,7 +1,11 @@
 import pickle
+from warnings import filterwarnings
 
 import numpy as np
 from typing import List
+
+
+filterwarnings("ignore")
 
 MODEL_FILE = "pickled_model_hw2.pkl"
 MODEL_FILE = "pickled_model.pkl"

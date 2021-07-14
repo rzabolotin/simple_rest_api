@@ -1,5 +1,6 @@
 import falcon
 from waitress import serve
+from loguru import logger
 
 from model import predict as model_predict
 
@@ -7,9 +8,10 @@ from model import predict as model_predict
 class PredictHandler:
     def on_post(self, req, resp):
         numbers = req.get_media()
-        message = {"prediction": model_predict(numbers)}
-        print(message)
-        resp.media = message
+        logger.info(f"Got request for prediction {numbers}")
+        prediction = model_predict(numbers)
+        logger.success(f"Calculated the prediction = {prediction}")
+        resp.media = {"prediction": prediction}
 
 
 app = falcon.App()
